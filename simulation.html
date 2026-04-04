@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar Time Component Simulation</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>📊 Calendar Time Component Simulation</h1>
+
+    <!-- THEORY -->
+    <section class="theory">
+        <h2>Concept</h2>
+        <p>
+            This simulation models the relationship between execution time (CPU time)
+            and real-world calendar time considering resource constraints.
+        </p>
+
+        <h3>Key Equation</h3>
+        <p><b>dt/dτ = (θ + μr λ) / (P ρ)</b></p>
+
+        <ul>
+            <li>θ → Resource usage per CPU hour</li>
+            <li>μr → Resource usage per failure</li>
+            <li>λ → Failure intensity (failures / CPU hr)</li>
+            <li>P → Total resources available</li>
+            <li>ρ → Utilization (0 to 1)</li>
+        </ul>
+    </section>
+
+    <!-- INPUTS -->
+    <section class="inputs">
+        <h2>Simulation Inputs</h2>
+
+        <label>Execution Time τ (CPU hours):</label>
+        <input type="number" id="tau" value="10">
+
+        <label>Failures μ (count):</label>
+        <input type="number" id="mu" value="25">
+
+        <label>θ (resource / CPU hr):</label>
+        <input type="number" id="theta" value="5">
+
+        <label>μr (resource / failure):</label>
+        <input type="number" id="mur" value="2">
+
+        <label>Failure Intensity λ (failures / CPU hr):</label>
+        <input type="number" id="lambda" value="2">
+
+        <label>Resource Available P (units):</label>
+        <input type="number" id="P" value="10">
+
+        <label>Utilization ρ (0–1):</label>
+        <input type="number" step="0.1" id="rho" value="0.8">
+
+        <button onclick="runSimulation()">Run Simulation</button>
+    </section>
+
+    <!-- OUTPUT -->
+    <section class="output">
+        <h2>Results</h2>
+        <p id="result">Result will appear here...</p>
+        <p id="interpretation"></p>
+    </section>
+
+    <!-- GRAPH -->
+    <section class="graph">
+        <h2>Graph: Calendar Time (days) vs Execution Time (CPU hr)</h2>
+        <canvas id="myChart"></canvas>
+    </section>
+<!-- GRAPH 2 -->
+<section class="graph">
+    <h2>Effect of Utilization (ρ) on Calendar Time</h2>
+    <canvas id="utilChart"></canvas>
+</section>
+
+<!-- GRAPH 3 -->
+<section class="graph">
+    <h2>Effect of Failure Intensity (λ) on Calendar Time</h2>
+    <canvas id="lambdaChart"></canvas>
+</section>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

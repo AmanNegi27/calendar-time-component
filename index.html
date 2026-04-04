@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Reliability Project</title>
+
+    <link rel="stylesheet" href="cover.css">
+</head>
+<body>
+
+<div class="cover-container">
+
+    <!-- LOGO -->
+    <img src="UPES.jpg" alt="College Logo" class="logo">
+
+    <!-- BIG TITLE -->
+    <h1 class="main-title">CALENDAR TIME COMPONENT</h1>
+    <h2 class="subtitle">Software Reliability & Testing</h2>
+
+    <!-- DETAILS -->
+    <div class="details">
+        <p><b>Name:</b> Aman Negi</p>
+        <p><b>SAP ID:</b> 500107844</p>
+        <p><b>College:</b> UPES</p>
+        <p><b>Course:</b> B.Tech. CSE(Hons) Data Science</p>
+    </div>
+
+    <!-- BUTTONS -->
+    <div class="buttons">
+        <button onclick="goToAbout()">📘 About Topic</button>
+        <button onclick="goToSimulation()">📊 Run Simulation</button>
+    </div>
+
+</div>
+
+<script>
+    function goToAbout() {
+        document.body.classList.add("fade-out");
+        setTimeout(() => {
+            window.location.href = "about.html";
+        }, 400);
+    }
+
+    function goToSimulation() {
+        document.body.classList.add("fade-out");
+        setTimeout(() => {
+            window.location.href = "simulation.html";
+        }, 400);
+    }
+</script>
+
+</body>
+</html>

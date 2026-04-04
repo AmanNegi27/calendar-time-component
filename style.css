@@ -1,0 +1,140 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Body */
+body {
+    background: linear-gradient(135deg, #141e30, #243b55);
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 950px;
+    margin: 40px auto;
+    background: rgba(255, 255, 255, 0.97);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.3);
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Headings */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1a2a6c;
+}
+
+h2 {
+    margin-bottom: 10px;
+    color: #243b55;
+}
+
+h3 {
+    margin-top: 10px;
+    color: #444;
+}
+
+/* Sections */
+section {
+    margin-bottom: 25px;
+    padding: 18px;
+    border-radius: 12px;
+    background: #f4f7fb;
+    transition: 0.3s;
+}
+
+section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Inputs */
+.inputs label {
+    display: block;
+    margin-top: 12px;
+    font-weight: 500;
+}
+
+.inputs input {
+    width: 100%;
+    padding: 9px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: 0.2s;
+}
+
+.inputs input:focus {
+    border-color: #1a2a6c;
+    box-shadow: 0 0 5px rgba(26,42,108,0.3);
+}
+
+/* Button */
+button {
+    margin-top: 18px;
+    width: 100%;
+    padding: 11px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #1a2a6c, #243b55);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.03);
+    opacity: 0.9;
+}
+
+/* Output */
+.output p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+#interpretation {
+    font-size: 15px;
+    font-weight: normal;
+    color: #555;
+}
+
+/* Highlight result */
+#result {
+    color: #1a2a6c;
+}
+
+/* Graph */
+canvas {
+    margin-top: 15px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+}

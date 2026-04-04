@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Calendar Time Component</title>
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1 class="title">Calendar Time Component</h1>
+    <p class="subtitle">A Software Reliability Perspective</p>
+
+    <!-- SECTION -->
+    <div class="card">
+        <h2>1. Motivation</h2>
+        <p>
+            Execution time alone is insufficient to represent real-world software
+            development timelines. Factors such as resource limitations, failure handling,
+            and system utilization significantly affect actual completion time.
+        </p>
+    </div>
+
+    <!-- SECTION -->
+    <div class="card">
+        <h2>2. Literature Overview</h2>
+        <p>
+            Traditional reliability models emphasize CPU execution time. Modern models
+            extend this by introducing calendar time, which reflects real-world delays
+            and constraints in software testing and debugging.
+        </p>
+    </div>
+
+    <!-- SECTION -->
+    <div class="card highlight">
+        <h2>3. Technique Used</h2>
+        <p class="formula">dt/dτ = (θ + μr λ) / (P ρ)</p>
+
+        <ul>
+            <li><b>θ</b> → Resource usage per CPU hour</li>
+            <li><b>μr</b> → Resource usage per failure</li>
+            <li><b>λ</b> → Failure intensity</li>
+            <li><b>P</b> → Available resources</li>
+            <li><b>ρ</b> → Utilization</li>
+        </ul>
+    </div>
+
+    <!-- SECTION -->
+    <div class="card">
+        <h2>4. Impact on Software Reliability</h2>
+        <p>
+            This model provides realistic project timelines, improves planning accuracy,
+            and helps optimize resource allocation in software development cycles.
+        </p>
+    </div>
+
+    <!-- SECTION -->
+    <div class="card">
+        <h2>5. Conclusion</h2>
+        <p>
+            The calendar time component bridges the gap between theoretical execution
+            time and real-world development time, making reliability predictions more practical.
+        </p>
+    </div>
+
+    <!-- SECTION -->
+    <div class="card">
+        <h2>6. Future Work</h2>
+        <ul>
+            <li>Dynamic resource allocation models</li>
+            <li>Failure intensity decay integration</li>
+            <li>AI-based prediction systems</li>
+            <li>Real-time project monitoring integration</li>
+        </ul>
+    </div>
+
+    <button onclick="goHome()">⬅ Back to Home</button>
+
+</div>
+
+<script>
+    function goHome() {
+        document.body.classList.add("fade-out");
+        setTimeout(() => {
+            window.location.href = "index.html";
+        }, 400);
+    }
+</script>
+
+</body>
+</html>
