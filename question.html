@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question - Calendar Time Component</title>
+
+    <!-- MathJax -->
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="theme.js" defer></script>
+
+    <link rel="stylesheet" href="question.css">
+</head>
+<body>
+
+<div class="theme-switcher">
+    <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()">🌙 Dark Mode</button>
+</div>
+<div class="container">
+
+    <h1>Calendar Time Component</h1>
+
+    <!-- Example Title -->
+    <div class="card">
+        <h2>Sample Question</h2>
+
+        <p>
+            Initial failure intensity \( \lambda_0 \) for a given software is 
+            20 failures/CPU hr. The failure intensity objective \( \lambda_F \) 
+            of 1 failure/CPU hr is to be achieved. Assume the following resource 
+            usage parameters.
+        </p>
+
+        <!-- Table -->
+        <table>
+            <tr>
+                <th>Resource Usage</th>
+                <th>Per hour</th>
+                <th>Per failure</th>
+            </tr>
+            <tr>
+                <td>Failure identification effort</td>
+                <td>2 Person hr</td>
+                <td>1 Person hr</td>
+            </tr>
+            <tr>
+                <td>Failure correction effort</td>
+                <td>0</td>
+                <td>5 Person hr</td>
+            </tr>
+            <tr>
+                <td>Computer time</td>
+                <td>1.5 CPU hr</td>
+                <td>1 CPU hr</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Question -->
+    <div class="card">
+        <h2>Question</h2>
+
+        <p>
+            (a) What resources must be expended to achieve the reliability improvement? 
+            Use the logarithmic Poisson execution time model with a failure intensity 
+            decay parameter of 0.025/failure.
+        </p>
+
+        <p>
+            (b) If the failure intensity objective is cut to half, what is the effect 
+            on requirement of resources?
+        </p>
+    </div>
+
+    <!-- Solution (Animated) -->
+    <div class="card">
+        <h2>Solution</h2>
+        <div id="solution"></div>
+    </div>
+
+    <button onclick="goHome()">⬅ Back</button>
+
+</div>
+
+<script src="question.js"></script>
+
+<script>
+function goHome() {
+    window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>

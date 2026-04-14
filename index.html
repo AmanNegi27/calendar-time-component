@@ -6,9 +6,13 @@
     <title>Software Reliability Project</title>
 
     <link rel="stylesheet" href="cover.css">
+    <script src="theme.js" defer></script>
 </head>
 <body>
 
+<div class="theme-switcher">
+    <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()">🌙 Dark Mode</button>
+</div>
 <div class="cover-container">
 
     <!-- LOGO -->
@@ -29,7 +33,9 @@
     <!-- BUTTONS -->
     <div class="buttons">
         <button onclick="goToAbout()">📘 About Topic</button>
-        <button onclick="goToSimulation()">📊 Run Simulation</button>
+        <button onclick="goToSimulation()">📊 Simulation</button>
+        <button onclick="goToQuestion()">❓ Question</button>
+        <button onclick="goToDerivation()">∑ Derivation</button>
     </div>
 
 </div>
@@ -46,6 +52,20 @@
         document.body.classList.add("fade-out");
         setTimeout(() => {
             window.location.href = "simulation.html";
+        }, 400);
+    }
+
+    function goToQuestion() {
+        document.body.classList.add("fade-out");
+        setTimeout(() => {
+            window.location.href = "question.html";
+        }, 400);
+    }
+
+    function goToDerivation() {
+        document.body.classList.add("fade-out");
+        setTimeout(() => {
+            window.location.href = "derivation.html";
         }, 400);
     }
 </script>
