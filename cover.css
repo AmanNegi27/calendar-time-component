@@ -56,7 +56,7 @@ body.dark-theme::before {
 }
 
 .profile-pic {
-    width: 220px;
+    width: 100px;
     aspect-ratio: 1/1;
     border-radius: 50%;
     object-fit: cover;
@@ -157,7 +157,7 @@ body.dark-theme .details p b {
 
 /* Logo */
 .logo {
-    width: 220px;
+    width: 1500px;
     max-width: 80%;
     height: auto;
     margin-bottom: 28px;
